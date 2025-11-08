@@ -71,7 +71,7 @@ proxy-providers:
       interval: 300
   SG:
     type: http
-    url: "https://raw.githubusercontent.com/iputukrisnatadewa-boop/akun/refs/heads/main/tiktoks.txt?token=GHSAT0AAAAAADO2P3CJRXX3PINQC7LT4YQS2IO7AMA"
+    url: "https://raw.githubusercontent.com/oranglemah97/umum/refs/heads/main/tiktok.txt"
     path: "./proxy_provider/SG.yaml"  # cache lokal (opsional tapi disarankan)
     interval: 86400
     health-check:

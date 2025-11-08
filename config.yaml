@@ -62,31 +62,31 @@ proxy-groups:
 proxy-providers:
   ID:
     type: http
-    url: "https://raw.githubusercontent.com/oranglemah97/umum/refs/heads/main/edu.txt"
+    url: "https://raw.githubusercontent.com/iputukrisnatadewa-boop/akun/refs/heads/main/tiktoks.txt?token=GHSAT0AAAAAADO2P3CJRXX3PINQC7LT4YQS2IO7AMA"
     path: "./proxy_provider/ID.yaml"  # cache lokal (opsional tapi disarankan)
     interval: 86400
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-  SG:
-    type: http
-    url: "https://raw.githubusercontent.com/oranglemah97/umum/refs/heads/main/tiktok.txt"
-    path: "./proxy_provider/SG.yaml"  # cache lokal (opsional tapi disarankan)
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-  MIX:
-    type: http
-    url: "https://raw.githubusercontent.com/oranglemah97/umum/refs/heads/main/line.txt"
-    path: "./proxy_provider/MIX.yaml"  # cache lokal (opsional tapi disarankan)
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+#  SG:
+#    type: http
+#    url: "https://raw.githubusercontent.com/oranglemah97/umum/refs/heads/main/tiktok.txt"
+#    path: "./proxy_provider/SG.yaml"  # cache lokal (opsional tapi disarankan)
+#    interval: 86400
+#    health-check:
+#      enable: true
+#      url: http://www.gstatic.com/generate_204
+#      interval: 300
+ # MIX:
+ #   type: http
+ #   url: "https://raw.githubusercontent.com/oranglemah97/umum/refs/heads/main/line.txt"
+ #   path: "./proxy_provider/MIX.yaml"  # cache lokal (opsional tapi disarankan)
+ #   interval: 86400
+ #   health-check:
+ #     enable: true
+ #     url: http://www.gstatic.com/generate_204
+ #     interval: 300
 rules:
 - MATCH,PROXY,LOAD-BALANCE ID,LOAD-BALANCE SG,URLTEST ID,URLTEST SG,FALLBACK
 external-ui: ./dashboard 
